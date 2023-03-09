@@ -1,0 +1,26 @@
+nav {
+    background: var(--orange);
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+
+h2, a {
+    color: var(--white);
+    
+}
+a {
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+a:hover{
+    opacity: 0.8;
+    background: var(--orange-hover);
+    transition: 0.5s;
+}

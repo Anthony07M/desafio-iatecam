@@ -1,0 +1,9 @@
+<div class="container">
+    <app-product-table
+        [productList]="products"
+        [askDolar]="askDolar"
+    />
+    <div *ngIf="showFormModal">
+        <app-product-form-modal/>
+    </div>
+</div>

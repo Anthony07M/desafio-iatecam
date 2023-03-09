@@ -1,0 +1,59 @@
+<div class="container">
+    <button (click)="closeModal()" class="button-close">
+        <fa-icon [icon]="faClose"></fa-icon>
+    </button>
+    <form (ngSubmit)="submit()" [formGroup]="productForm" #formDir="ngForm">
+        <i class="fas fa-home"></i>
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" placeholder="Nome do produto" formControlName="name">
+            <div *ngIf="name!.invalid && formDir.submitted">
+                <p class="error">nome é obrigatório</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <input type="text" name="description" placeholder="Descrição do produto" formControlName="description">
+            <div *ngIf="description!.invalid && formDir.submitted">
+                <p class="error">descrição obrigatório</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price">Preço:</label>
+            <input type="number" name="price" placeholder="Valor por unidade" formControlName="price">
+            <div *ngIf="price!.invalid && formDir.submitted">
+                <p class="error">preço obrigatório</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="stock">Estoque:</label>
+            <input type="number" name="in_stock" placeholder="Quantas unidades em estoque?" formControlName="in_stock">
+            <div *ngIf="in_stock!.invalid && formDir.submitted">
+                <p class="error">estoque obrigatório</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="minumum">Mínimo em estoque:</label>
+            <input type="number" name="minimum_stock" placeholder="Quantidade mínima em estoque?"
+                formControlName="minimum_stock">
+            <div *ngIf="minimum_stock!.invalid && formDir.submitted">
+                <p class="error">quantidade mínima obrigatório</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dropdown">Selecione uma opção:</label>
+            <select id="dropdown" [(ngModel)]="selectedOption" formControlName="category_id">
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{ option.name }}
+                </option>
+            </select>
+            <div *ngIf="category_id!.invalid && formDir.submitted">
+                <p class="error">categoria obrigatória</p>
+            </div>
+        </div>
+        <div class="container-buttons">
+            <button (click)="closeModal()">Cancelar</button>
+            <input type="submit" [value]="'Salvar'">
+        </div>
+    </form>
+</div>

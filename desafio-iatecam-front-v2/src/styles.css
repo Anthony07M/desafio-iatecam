@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --orange: #df5020;
+    --orange-hover: #59200d;
+    --white: #ffff;
+    --red: #b31a33;
+    --red-hover: #590d1a;
+    --green: #99e54d;
+    --yellow: #dfbf20;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

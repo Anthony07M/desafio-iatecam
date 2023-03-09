@@ -1,0 +1,146 @@
+@keyframes transitionPage {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.container {
+  border: 1px solid;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(51, 51, 51, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  animation: transitionPage 0.8s;
+}
+
+
+select {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #e58c4d;
+}
+
+select:hover {
+  background-color: #ddd;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 3px #aaa;
+  background-color: #fff;
+}
+
+form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  background: var(--white);
+}
+
+option {
+  font-size: 0.85rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.95em;
+  margin-bottom: 0.4em;
+  color: var(--orange);
+}
+
+
+.form-group input {
+  padding: 0.6em;
+  font-size: 0.8em;
+  border-radius: 5px;
+  border: 1px solid #e58c4d;
+  padding: 1rem;
+}
+
+
+input[type="submit"] {
+  border: 2 px solid transparent;
+  padding: 0.6em 1em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 5px;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background: var(--orange-hover);
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+
+button {
+  padding: 0 1rem;
+  border: 2 px solid transparent;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 5px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+button:hover {
+  background: var(--red-hover);
+}
+
+.button-close {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 60px;
+  right: 33%;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+    <app-category-table
+       [categoriesList]="categoriesList"
+    />
+    <div *ngIf="showFormModal">
+        <app-category-form-modal/>
+    </div>
+</div>
+    <!-- <app-product-table
+        [productList]="products"
+    /> -->

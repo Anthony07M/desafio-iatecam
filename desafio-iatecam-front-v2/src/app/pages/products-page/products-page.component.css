@@ -1,0 +1,17 @@
+@keyframes transitionPage {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: transitionPage 0.8s;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <table cellspacing="0">
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Descrição</td>
+        </tr>
+        <tr *ngFor="let category of categoriesList">
+            <td>{{category.id}}</td>
+            <td>{{category.name}}</td>
+            <td>{{category.description}}</td>
+        </tr>
+    </table>
+    <button (click)="openFormModal()">ADICIONAR</button>
+</div>
