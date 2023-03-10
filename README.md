@@ -37,7 +37,11 @@ Subindo o serviço
 ```sh
     uvicorn main:app
 ```
+Para este exemplo use a seguinte url para o Docker local
 
+```sh
+DATABASE_URL="postgresql://admin:1234@localhost:5432/estoque" 
+```
 Documentação
 ```sh
     http://127.0.0.1:8000/docs/
